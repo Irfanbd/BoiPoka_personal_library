@@ -21,6 +21,10 @@ if(mysqli_num_rows($result)>0){
         <th>Action</th>
         </thead>
         <tbody>
+
+        <?php
+while()
+        ?>
             <tr>
                 <td>1</td>
                 <td>Ramesh</td>
