@@ -1,51 +1,76 @@
 <?php
-$sql = "SELECT * FROM 'boipoka' WHERE ";
-$result = mysqli_query($conn, $sql) or die("Unsuccessful Query");
-if (mysqli_num_rows($result) > 0) {
-    ?>
+include 'header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Boi Poka</title>
-</head>
-<body>
-
-    <div class="container">
-<H1>Welcome To My World</H1>
-
-<table class="table table-striped">
-<thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>
-    <a href="edit.php">Edit</a>
-    <a href="delete.php">Delete</a>
-    </td>
-    </tr>
-    
-    
-  </tbody>
-</table>
-<?php
-}
-?>
-    </div>
+<div id="main-content">
+    <h2>All Records</h2>
+    <table cellpadding="7px">
+        <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Class</th>
+        <th>Phone</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ramesh</td>
+                <td>Delhi</td>
+                <td>BCA</td>
+                <td>9876543210</td>
+                <td>
+                    <a href='edit.php'>Edit</a>
+                    <a href='delete-inline.php'>Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Suresh</td>
+                <td>Punjab</td>
+                <td>BCOM</td>
+                <td>9876543210</td>
+                <td>
+                    <a href='edit.php'>Edit</a>
+                    <a href='delete-inline.php'>Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Suresh</td>
+                <td>Haryana</td>
+                <td>BSC</td>
+                <td>9876543210</td>
+                <td>
+                    <a href='edit.php'>Edit</a>
+                    <a href='delete-inline.php'>Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Krishna</td>
+                <td>Gujrat</td>
+                <td>BCA</td>
+                <td>9876543210</td>
+                <td>
+                    <a href='edit.php'>Edit</a>
+                    <a href='delete-inline.php'>Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rohit</td>
+                <td>Delhi</td>
+                <td>BCA</td>
+                <td>9876543210</td>
+                <td>
+                    <a href='edit.php'>Edit</a>
+                    <a href='delete-inline.php'>Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
 </body>
 </html>
