@@ -13,34 +13,35 @@ if(mysqli_num_rows($result)>0){
     ?>
     <table cellpadding="7px">
         <thead>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Class</th>
-        <th>Phone</th>
-        <th>Action</th>
+        <th>Book ID</th>
+        <th>Book Name</th>
+        <th>Writer Name</th>
+        <th>Book Genre</th>
         </thead>
         <tbody>
 
         <?php
-while()
+while($row=mysqli_fetch_assoc($result)){
         ?>
             <tr>
-                <td>1</td>
-                <td>Ramesh</td>
-                <td>Delhi</td>
-                <td>BCA</td>
-                <td>9876543210</td>
+                <td><?php echo $row['bid'];?></td>
+                <td><?php echo $row['bname'];?></td>
+                <td><?php echo $row['wname'];?></td>
+                <td><?php echo $row['genre'];?></td>
                 <td>
                     <a href='edit.php'>Edit</a>
                     <a href='delete-inline.php'>Delete</a>
                 </td>
             </tr>
-            
+            <?php
+}?>
         </tbody>
     </table>
     <?php
+ } else{
+     echo"<h2>No Record Found</h2>";
  }
+ mysqli_close($conn);
  ?>
 </div>
 </div>
