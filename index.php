@@ -2,13 +2,12 @@
 include 'header.php';
 ?>
 <div id="main-content">
-    <h2>All Records</h2>
+    <h2>All Books Record</h2>
     <?php
 $conn=mysqli_connect("localhost","root","","crud") or die("Connection Faild");
 $sql="SELECT* FROM boipoka";
 $result=mysqli_query($conn,$sql) or die("Unsuccessful Query");
 if(mysqli_num_rows($result)>0){
-
 
     ?>
     <table cellpadding="7px">
@@ -17,6 +16,7 @@ if(mysqli_num_rows($result)>0){
         <th>Book Name</th>
         <th>Writer Name</th>
         <th>Book Genre</th>
+        <th>Action</th>
         </thead>
         <tbody>
 
